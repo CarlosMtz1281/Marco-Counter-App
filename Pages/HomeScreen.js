@@ -6,7 +6,25 @@ import { useState } from "react";
 import ProgressWidget from "./../Components/ProgressWidget";
 import { TouchableOpacity } from "react-native";
 
+
+
+
 export default function HomeScreen(){
+    //hooks
+    const [progressCal, setProgressCal] = useState(0);
+    const [goalCal, setGoalCal] = useState(2000);
+    const [progressPro, setProgressPro] = useState(0);
+    const [goalPro, setGoalPro] = useState(140);
+
+    function updateProgressCal(num){
+        console.log("Valor de progreso "+progressCal)
+        console.log("Valor de num "+num)
+        setProgressCal(progressCal + num);
+    }
+    function updateProgressPro(num){
+        setProgressPro(progressPro + num);
+    }
+
     return(
         <View style={style.container}>
             <Text style={style.mainTitle}>Hello User</Text>
@@ -15,14 +33,16 @@ export default function HomeScreen(){
             <ProgressWidget
                 macro={"Calories"}
                 unit={"Kcal"}
-                progress={500}
-                goal={2500}
+                progress={progressCal}
+                goal={goalCal}
+                onUpdateProgress={updateProgressCal}
             />
             <ProgressWidget
                 macro={"Protein"}
                 unit = {"g"}
-                progress={50}
-                goal={140}
+                progress={progressCal}
+                goal={goalPro}
+                onUpdateProgress={updateProgressPro}
             />
 
             <View style={{flexDirection: "row", width: "100%"}}>
