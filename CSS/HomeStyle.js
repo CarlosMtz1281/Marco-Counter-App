@@ -22,21 +22,39 @@ const style = StyleSheet.create({
         fontSize: 25,
         textAlign: "center",
     },
-
-    widgetContainer: {
-        height: 170,
-        width: "90%",
-        backgroundColor: colors.secondary,
-        borderRadius: 20,
-        marginTop: 45,
-        marginLeft: "5%",
+    settings:{
+        height: 100,
+        width: 170,
+        backgroundColor: colors.primary,
+        borderRadius: 10,
+        marginTop: 30,
+        marginLeft: 20,
+        display: "inline-block",
+        justifyContent: "flex-start",
+    },
+    settingsTxt:{
+        color: colors.whiteTxt,
+        marginLeft: 10,
+        marginTop: 65,
+        fontSize: 20,
 
     },
-    widgetTittle:{
-        fontSize: 25,
-        textAlign: "center",
-        marginTop: 110,
-    }
+    data:{
+        height: 100,
+        width: 170,
+        backgroundColor: colors.primary,
+        borderRadius: 10,
+        marginTop: 30,
+        marginLeft: 10,
+        justifyContent: "flex-end",
+        },
+        dataTxt:{
+            color: colors.whiteTxt,
+            marginLeft: 10,
+            marginBottom: 10,
+            fontSize: 20,
+        },
+
 
 });
 
