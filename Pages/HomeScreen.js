@@ -17,12 +17,12 @@ export default function HomeScreen(){
     const [goalPro, setGoalPro] = useState(140);
 
     function updateProgressCal(num){
-        console.log("Valor de progreso "+progressCal)
-        console.log("Valor de num "+num)
+
         setProgressCal(progressCal + num);
     }
     function updateProgressPro(num){
-        setProgressPro(progressPro + num);
+
+            setProgressPro(progressPro + num);
     }
 
     return(
@@ -40,11 +40,12 @@ export default function HomeScreen(){
             <ProgressWidget
                 macro={"Protein"}
                 unit = {"g"}
-                progress={progressCal}
+                progress={progressPro}
                 goal={goalPro}
                 onUpdateProgress={updateProgressPro}
             />
 
+            {/*Settings and extra buttons */}
             <View style={{flexDirection: "row", width: "100%"}}>
 
             <TouchableOpacity>

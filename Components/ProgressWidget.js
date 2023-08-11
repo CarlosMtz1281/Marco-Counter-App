@@ -23,8 +23,6 @@ export default function ProgressWidget({macro, unit, progress, goal, onUpdatePro
             console.log("Invalid input. Please enter a valid number.");
             return;
         }
-
-
         // Call the callback to update the value in the parent
         onUpdateProgress(parsedValue);
         newValue = 0;
